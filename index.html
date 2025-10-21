@@ -3,36 +3,285 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
 	<title></title>
 	<style>
-		body {margin: 0;}
-		header{background: blue;}
-		section{background: red;}
-		footer{background: green;}
-		header, section, footer {
+		body {
+			margin: 0;
+			font-family: 'Noto Serif KR', serif;
+		}
+
+		section{background: #F8ADBD;}
+		section{
 			width:400px;
-			padding:20px;
+			height: 500px;
+			padding:34px;
 			margin: auto;
 		}
-		h1, h2, p {color: white;}
-		img {width:100px;}
-		h1 {font-size: 56px;}
+		h1, h2, p {font-weight: 800; letter-spacing: -0.03em; line-height: 1.5;}
+		.tit_bk, p {color: #1F1B1B;}
+		.tit_wh, .p_wh {color: white;}
+		h1 {font-size: 42px;}
+		h2 {font-size: 21px; 
+			padding-top: 10px; padding-left: 10px;
+			position: relative;
+		}
+		h3 {font-size: 26px; margin: 0;}
+		span {font-size: 14px;}
+		h2::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 13px;
+			width: 2px; 
+			height: 70%; 
+		}
+		.tit_bk::before {
+			background-color: #1F1B1B;
+		}
+		.tit_wh::before {
+			background-color: white;
+		}
+
+		/** 1페이지 **/
+		#page_post {
+			background-image: url('bg_img_post.jpg');
+			background-size: 100% auto;
+			background-position: center; 
+			background-repeat: no-repeat;
+		}
+		#page_post header {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+		}
+		#page_post p {
+			color: #F72960; font-weight: 800;
+			display: flex; margin: 0;
+			justify-content: space-between;
+			margin-top: -10px;
+		}
+
+		#page_post h1{margin: 0; padding-bottom: 20px;}
+		#page_post h1 img {
+			width: 390px;
+		}
+		/*
+		.highlight {
+  			background-color: #F72960; 
+  			color: white;              
+  			display: inline-block;
+  			padding: 0 6px;
+  		}
+  		*/
+
+  		/** 2번째 페이지 **/
+  		.section_layout {
+  			display: flex;
+  			flex-direction: column;
+  			justify-content: space-between;
+  			height: 500px;
+  		}
+
+		.section_layout header h2 {
+		  margin: 0;
+		}
+
+		.section_layout p {
+		  margin: 0;
+		}
+
+		.section_layout img {
+			height: auto;
+			margin: 0 auto;
+			display: block;
+		}
+
+		#page2 img {
+		  width: 100%;
+
+		}
+
+		/** 3번째 페이지 **/
+		#page3 {background-image: url('bg_img_p3.jpg');
+			background-size: 100% auto;
+			background-position: center; 
+			background-repeat: no-repeat;
+		}
+
+		/** 4번째 페이지 **/
+		#page4 img {
+		  width: 272px;
+		}
+
+		/** 5번째 페이지 **/
+		#page5 {background-image: url('bg_img_p5.jpg');
+			background-size: 100% auto;
+			background-position: center; 
+			background-repeat: no-repeat;
+		}
+
+		/** 6번째 페이지 **/
+		#page6 img {
+		  width: 272px;
+		}
+
+		/** 7번째 페이지 **/
+		#page7 img {
+		  width: 300px;
+		}
+
+		/** 8번째 페이지 **/
+		.img_wrap {
+		  position: relative;
+		  width: 260px;
+		  margin-top: 30px;
+		}
+
+		.img_wrap .graph {
+			width:100%;
+			display: block;
+		}
+
+		.img_wrap .percent {
+			position: absolute;
+			top:46px;
+			left:2px;
+			width:60px;
+		}
+
+
+		/** 9번째 페이지 **/
+		#page9 {
+			background-image: url('bg_img_p9.jpg');
+			background-size: 100% auto;
+			background-position: center; 
+			background-repeat: no-repeat;
+		}
+
+		/** 10번째 페이지 **/
+		#page_last {
+			background-image: url('bg_img_p10.jpg');
+			background-size: 100% auto;
+			background-position: center; 
+			background-repeat: no-repeat;
+		}
+		#page_last header {text-align: center; margin-top: 70px;}
+		#page_last span {
+			display: block;
+			margin-bottom: 20px;
+		}
+
+
 	</style>
 </head>
 <body>
-	<header>
-		<h1>iPhone17</h1>
-	</header>
-	<section>
-		<img src="human.png">
-		<h2>카메라 프레임을 바꾸다</h2>
-		<p>새로운 전면 카메라는 사진과 동영상 등의 프레임을 유연하게 조절할 수 있게 해 줍니다.</p>
+	<section id="page_post">
+		<header>
+			<p>
+				<span>Social</span>
+				<span class="span_right">Issues</span>
+			</p>
+			<!--
+			<h1><span class="highlight">아줌마</span> 없이<br>굴러가지 않는 사회</h1>
+			-->
+			<h1><img src="header_post.png" alt="아줌마 없이 굴러가지 않는 사회"></h1>
+		</header>
 	</section>
-	<section>
-		<h2>Unibody 외장</h2>
-		<p>내용이 들어갑니다.</p>
-		<img src="human2.png">
+
+	<section id="page2" class="section_layout">
+		<header>
+			<h2 class="tit_bk">새벽 첫차를 타는 사람들</h2>
+		</header>
+		<img src="img_p2.jpg">
+		<p>동도 트지 않은 꼭두새벽에 첫차를 탄 여성들<br>그들은 어디로 향할까요?</p>
 	</section>
-	<footer>copyright</footer>
+
+	<section id="page3" class="section_layout">
+		<header>
+			<h2 class="tit_wh">그들은 청소를 하러 갑니다</h2>
+		</header>
+		<p class="p_wh">
+			이옥자(79)씨는 청소 일을 시작한 지 30년이 됐습니다.<br>
+			60대에 170만원 받았던 월급이 70대 들어 130만원으로<br>
+			줄었지만, 그는 “이 일이 너무 좋다”고 합니다.<br>
+			“열심히 하면 결과가 바로 보이니까.<br>
+			이 나이에 움직여서 밥 벌어 먹고 사는 게 얼마나 복입니까.”
+		</p>
+	</section>
+
+	<section id="page4" class="section_layout">
+		<header>
+			<h2 class="tit_bk">매일 오전 4~5시 버스 승객 2만5천명 이상</h2>
+		</header>
+		<img src="img_p4.png">
+		<p>
+			청소업은 다른 직종에 비해 고령화가 심하고 여성 비율이<br> 
+			압도적으로 높습니다. 평균 연령은 61.1세(전체 노동자 평균연령 45세)이고, 청소업 내에서도 고령으로 갈수록, 남성에 비해 여성 노동자들의 시간당 임금과 월평균 수입이 낮아요.
+		</p>
+	</section>
+
+	<section id="page5" class="section_layout">
+		<header>
+			<h2 class="tit_wh">그들은 식사를 만들러 갑니다</h2>
+		</header>
+		<p class="p_wh">
+			구내식당에서 조리원으로 근무하는 김금란(63)씨는 5년째 
+			서울대입구역에서 첫차를 타고 출근합니다. 직원 50여 명이 먹을 아침 식사를 준비해야 하기 때문입니다. 오전 6시부터 쌀 안치고, 나물 무치고, 반찬 몇 가지를 하고 나면 금세 8시.
+			아침 식사가 끝나면 곧바로 점심 식사 준비에 돌입해요.
+		</p>
+	</section>
+
+	<section id="page6" class="section_layout">
+		<header>
+			<h2 class="tit_bk">결코 멈출 수 없는 노동</h2>
+		</header>
+		<img src="img_p6.png">
+		<p>
+			특정 분야의 노동이 멈추면 다른 이들의 일상까지 무너지는 ‘결코 멈출 수 없는 노동’이 있습니다. 돌봄, 운송, 청소·환경, 배달 등으로 대표되는 ‘필수노동자’들입니다.
+		</p>
+	</section>
+
+	<section id="page7" class="section_layout">
+		<header>
+			<h2 class="tit_bk">필수노동자 4명 중 1명은 60세 이상 여성</h2>
+		</header>
+		<img src="img_p7.png">
+		<p>
+			여성 필수노동자는 2015년 204만명에서 2022년 274만명까지 늘었습니다. 남성 증가 폭(193만명→212만명)과 견줘 3배 이상 많은 수치입니다. 필수노동자의 ‘여성화 현상’이 가속화하는 것입니다.
+		</p>
+	</section>
+
+	<section id="page8" class="section_layout">
+		<header>
+			<h2 class="tit_bk">여성화, 고령화, 저임금</h2>
+		</header>
+		<section class="img_wrap">
+			<img src="percent.png" class="percent">
+			<img src="img_p8.png" class="graph">
+		</section>
+		<p>
+			필수노동자 연령 분포는 60살 이상이 35.1%, 50대 24.2%로<br>
+			50살 이상 중고령층이 절반 이상을 차지합니다.<br>
+			여성 필수노동자는 임금 수준도 열악한 환경에 놓여있어요.
+		</p>
+	</section>
+
+	<section id="page9" class="section_layout">
+		<header>
+			<h2 class="tit_wh">묵묵히 이 사회를 굴러가게 하는 그들</h2>
+		</header>
+		<p class="p_wh">
+			사회를 멈춰 세울 정도의 중요한 노동은 너무도 값싼 비용으로 유지돼 왔습니다. 모두가 꺼리는 적은 임금, 열악한 근무환경, 불안정한 일자리, 필수노동을 낮잡아 보는 편견을 고령층 여성들이 감수해 왔기 때문이죠. 마치 집을 꾸리고 지켜온 것처럼 고령층 여성은 이 사회를 받치고 지켜왔습니다.
+		</p>
+	</section>
+
+	<section id="page_last">
+		<header>
+			<span class="p_wh">더 주목해야 할 존재들</span>
+			<h3 class="tit_wh">아줌마들이 사라진다면<br>우리는 무너질 겁니다.</h2>
+		</header>
+	</section>
 </body>
 </html>
